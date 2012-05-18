@@ -1,5 +1,18 @@
 #!/bin/bash
 
+# Memtester
+# by Dan Barrett
+# http://theblahman.net
+
+# v1.0 - 18/05/2012
+# Initial release
+
+# Assuming you have the memtest CLI utility,
+# this script copies memtest to the /usr/bin
+# folder before adding aliases to /etc/profile
+# so when the Mac boots to single user mode,
+# it will be executed on boot completion
+
 # 99% of the time, disk0s2 is the Mac boot volume
 disk=`diskutil list | grep 'disk0s2'`
 # Get the stuff between partition type and size
